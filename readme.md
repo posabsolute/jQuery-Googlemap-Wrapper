@@ -26,28 +26,27 @@ The first thing you will want to do is, of course, create a map. For that you wi
 
 By now, you should have a map pointing on the US. Now we want to add markers and bubbles linked to them of course!
 
-var addresses = { “markers” : [
-  {"title":"This is bubble text1", "address" : "1 Learjet Way, Wichita, KS, United States"},
-  {"title":"This is bubble text2", "address" : "1 Croton Point Avenue, Croton On Hudson, NY, United States"}
- ]}
+    var addresses = { “markers” : [
+        {"title":"This is bubble text1", "address" : "1 Learjet Way, Wichita, KS, United States"},
+        {"title":"This is bubble text2", "address" : "1 Croton Point Avenue, Croton On Hudson, NY, United States"}
+    ]}
 
 usamap.AddMarkers(addresses)
 
 The title will be push into the information bubble, you could also put HTML tags in there. As for the address, there is a little bit of magic happening. You can’t send directly an address into the map and get a marker, you need to use what Google call, the geocoder, to get the longitude and latitude, and after that push them to the map. You could alternatively directly use the latitude and longitude following this pattern:
 
 
- var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
- var myLatlng2 = new google.maps.LatLng(-25.363882,131.044922);
-
- var addresses = { "markers" : [
-   {"title":"This is title 1", "address" : myLatlng },
-   {"title":"This is title 2", "address" : myLatlng2}
-  ]}
-      usamap.AddMarkers(addresses)
+    var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+    var myLatlng2 = new google.maps.LatLng(-25.363882,131.044922);
+    var addresses = { "markers" : [
+        {"title":"This is title 1", "address" : myLatlng },
+        {"title":"This is title 2", "address" : myLatlng2}
+    ]}
+    usamap.AddMarkers(addresses)
 
 ## Removing markers
 
 For now You can only remove all the markers, you cannot select them.
 
-usamap.RemoveAllMarkers();
+    usamap.RemoveAllMarkers();
 
