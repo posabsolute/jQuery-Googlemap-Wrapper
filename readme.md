@@ -10,16 +10,17 @@ A small plugin that handle the google map API. Why? It's prettier. I also includ
 The first thing you will want to do is, of course, create a map. For that you will have to link all files and instantiate the class.
 
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
-	<script src="js/helperGoogleMap.js" type="text/javascript"></script>
-	$(document).ready(function() {
- 		var usamap = new HelperGoogleMap({
-  			"container" :"gMap",   // HTML Id of the map container
-  			"zoom"  : 4,   // Map Zoom Level
-  			"center" : new google.maps.LatLng(39.639538, -97.470703), // Map starting position in latitude and Longitude
-  			"mapTypeId" : google.maps.MapTypeId.SATELLITE // Type of map: SATELLITE, ROADMAP, HYBRID, TERRAIN
- 		});
-	});
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+    <script src="js/helperGoogleMap.js" type="text/javascript"></script>
+    $(document).ready(function() {
+        var usamap = new HelperGoogleMap({
+            "container" :"gMap",   // HTML Id of the map container
+            "zoom"  : 4,   // Map Zoom Level
+            "center" : new google.maps.LatLng(39.639538, -97.470703), // Map starting position in latitude and Longitude
+            "mapTypeId" : google.maps.MapTypeId.SATELLITE // Type of map: SATELLITE, ROADMAP, HYBRID, TERRAIN
+        });
+    });
+
 
 ## Adding markers
 
